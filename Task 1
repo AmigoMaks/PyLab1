@@ -1,0 +1,11 @@
+import math
+
+a = float(input("Input a: "))
+b = float(input("Input b: "))
+
+if a >= 15:
+    z = math.sin(2 * a) + math.cos(2 * b)
+else:
+    z = math.sqrt(a + b**2)
+
+print("z =", z)
