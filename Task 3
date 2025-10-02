@@ -1,0 +1,29 @@
+n = int(input("Input size of array: "))
+arr = []
+
+print ("Input array elements: ")
+for i in range (n):
+    num = int(input())
+    arr.append(num)
+
+negative_elements = [x for x in arr if x < 0]
+if negative_elements:
+    max_negative = max(negative_elements)
+else:
+    max_negative = None
+
+product = 1
+has_odd = False
+for x in arr:
+    if x % 2 != 0 and x != 0:
+        product *= x
+        has_odd = True
+if not has_odd:
+    product = None
+
+even_reversed = [x for x in arr if x % 2 == 0][::-1]
+
+print("Array:", arr)
+print("Max negative element:", max_negative)
+print("Product of odd elements (!=0):", product)
+print("Even elements in reverse:", even_reversed)
